@@ -1,5 +1,8 @@
 package edu.chris.sanabra.actividades.act1.models;
 
+/**
+ * Clase que se encarga de gestionar los autos
+ */
 public class Car {
     private String modelo;
     private String marca;
@@ -7,6 +10,10 @@ public class Car {
     private String color;
 
     @Override
+    /**
+     * 
+     * @return una cadena de texto con la informacion del auto
+     */
     public String toString() {
         return "Car{" +
                 "modelo='" + modelo + '\'' +
@@ -15,7 +22,13 @@ public class Car {
                 ", color='" + color + '\'' +
                 '}';
     }
-
+    /**
+     * 
+     * @param modelo el año del auto
+     * @param marca empresa del auto
+     * @param numeroPuertas numero de puertas del auto
+     * @param color Blanco y gris por dar algun ejemplo
+     */
     public Car(String modelo, String marca, int numeroPuertas, String color) {
         this.modelo = modelo;
         this.marca = marca;
@@ -23,7 +36,10 @@ public class Car {
         this.color = color;
         this.setNumeroPuertas(numeroPuertas);
     }
-
+    /**
+     * 
+     * @return el numero de puertas del auto
+     */
     public int getNumeroPuertas() {
         return numeroPuertas;
     }
@@ -40,27 +56,45 @@ public class Car {
 
         this.numeroPuertas = numeroPuertas;
     }
-
+    /**
+     * 
+     * @return el modelo del auto
+     */
     public String getModelo() {
         return modelo;
     }
-
+    /**
+     * 
+     * @param modelo pone el modelo del auto
+     */
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
+    /**
+     * 
+     * @return la marca del auto
+     */
     public String getMarca() {
         return marca;
     }
-
+    /**
+     * 
+     * @param marca pone la marca del auto
+     */
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
+    /**
+     * 
+     * @return el color del auto
+     */
     public String getColor() {
         return color;
     }
-
+    /**
+     * 
+     * @param color pone el color del auto
+     */
     public void setColor(String color) {
         this.color = color;
     }
