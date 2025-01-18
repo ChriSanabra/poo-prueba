@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.chris.sanabra.actividades.act1.models.Car;
-
+/**
+ * Clase que se encarga de gestionar el stock de autos
+ */
 public class StockManager {
     ArrayList<Car> stock;
 
+
+    /**
+     * Constructor de la clase
+     */
     public StockManager() {
         this.stock = new ArrayList<>();
     }
@@ -26,6 +32,10 @@ public class StockManager {
 
     }
 
+    /**
+     * 
+     * @return lista de autos en el catalogo
+     */
    public List<Car> getStock(){
         return stock;
     }

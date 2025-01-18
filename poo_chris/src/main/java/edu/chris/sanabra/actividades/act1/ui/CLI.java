@@ -5,7 +5,13 @@ import java.util.Scanner;
 
 import edu.chris.sanabra.actividades.act1.process.StockManager;
 
+/**
+ * Clase que se encarga de la interfaz de usuario
+ */
 public class CLI {
+    /**
+     * Metodo que se encarga de correr la aplicacion
+     */
     public static void runApp(){
         try (Scanner scanner = new Scanner(System.in)) {
             StockManager stockManager = new StockManager();
@@ -39,20 +45,18 @@ public class CLI {
             }
         }
     }
-    public static void showMenu(){
-        System.out.println("""
-                Menu
-                1. agregar Carro al catalogo
-                2. mostrar catalogo
-                3. Salir
-                """);
+    /**Se encarga de imprimir el menú */
+    public static void showMenu() {
+        System.out.println("╔════════════════════════════════════════╗");
+        System.out.println("║          SISTEMA DE INVENTARIO         ║");
+        System.out.println("╠════════════════════════════════════════╣");
+        System.out.println("║          Seleccione una opción:        ║");
+        System.out.println("╠════════════════════════════════════════╣");
+        System.out.println("║  1. Agregar carro                      ║");
+        System.out.println("║  2. Ver stock                          ║");
+        System.out.println("║  3. Salir                              ║");
+        System.out.println("╚════════════════════════════════════════╝");
+        System.out.print("╔═> Opción: ");
     }
-    public static void ShowMessage(Object object) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ShowMessage'");
-    }
-    public static void ShowError(Object object) {
-        //TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ShowError'");
-    }
+    
 }
