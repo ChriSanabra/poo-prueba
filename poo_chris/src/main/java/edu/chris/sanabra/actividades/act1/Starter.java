@@ -6,7 +6,7 @@ public class Starter {
 
     /**
      * 
-     * @param args Practicamente inicia el programa y/o la aplicacion
+     * @param args Practica1mente inicia el programa y/o la aplicacion
      */
     public static void main(String[] args) {
       
