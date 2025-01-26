@@ -1,13 +1,22 @@
 package edu.chris.sanabra.actividades.act2.process;
+import  edu.chris.sanabra.actividades.act2.data.Data;
 
 public class NameValidator {
-    public static boolean validateName(String name) {
-    boolean valid = false;
-    int index = 0;
-        while(!valid && index <nombres.length){
-            if(nombres[index].equals(name)){
-                valid = true;
+    /**
+     * 
+     * @param name Nombre a validar
+     * @return true si el nombre esta en la lista, false si no
+     */
+    public static boolean validateName(String name){
+        String storedName = name.toLowerCase();
+        boolean isValid = false;
+        for(String nameToValidate: Data.nombres){
+            if(nameToValidate.toLowerCase().equals(storedName)){
+                isValid = true;
+                break;
             }
         }
+        return isValid;
     }
+
 }

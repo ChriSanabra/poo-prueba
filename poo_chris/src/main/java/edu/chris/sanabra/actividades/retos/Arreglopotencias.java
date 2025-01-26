@@ -10,5 +10,6 @@ public class Arreglopotencias {
         for (int i = 0; i < potencias.length; i++) {
             System.out.println("El cuadrado de " + numeros[i] + " es: " + potencias[i]);
         }
+    
     }
 }

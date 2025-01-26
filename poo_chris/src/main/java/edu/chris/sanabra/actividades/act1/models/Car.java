@@ -40,7 +40,7 @@ public class Car {
 
         this.numeroPuertas = numeroPuertas;
     }
-
+    
     public String getModelo() {
         return modelo;
     }
