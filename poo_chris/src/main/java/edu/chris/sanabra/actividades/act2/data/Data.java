@@ -6,7 +6,7 @@ public class Data {
      * 
      * @param nombres Arreglo de los nombres en la lista
      */
-    public static String[] nombres= {"Christian", "Jose", "Saul", "Humberto", "Sahid", "Victor", "Sebastian"};
+    public static String[] nombres= {"Christian", "Jose", "Saul", "Humberto", "Sahid", "Victor", "Sebastian", "Axaí"};
 
     public Data(String name) {
         this.name = name;
@@ -18,5 +18,6 @@ public class Data {
 
     public void setName(String name) {
         this.name = name;
+        
     }
 }
