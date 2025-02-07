@@ -10,52 +10,52 @@ public class CLI {
      * Método que ejecuta la aplicación
      */
     public static void runApp() {
-        Scanner scanner = new Scanner(System.in);
-        int[] numerosPares = Number.generarNumerosPares();
-        showMenu();
-        int opcion = scanner.nextInt();scanner.nextLine();   
-        
-        while (opcion !=3) {
-            switch (opcion) {
-                case 1:
-                    
-                    System.out.println("╔═════════════════════╗");
-                    System.out.println("║ ¿Cuál es tú nombre? ║");
-                    System.out.println("╚═════════════════════╝");
-                    String name = scanner.nextLine();
-                    if (NameValidator.validateName(name)) {
-                        System.out.println("╔═══════════════════════════════════════════╗");
-                        System.out.println("║ Tu nombre es especial, ¡está en la lista! ║");
-                        System.out.println("╚═══════════════════════════════════════════╝");
-                    
-                    } else {  
-                        System.out.println("╔═════════════════════════════════════════╗");
-                        System.out.println("║ No está tú nombre, será para la otra :( ║");
-                        System.out.println("╚═════════════════════════════════════════╝");
-                    }
-                    break;
-                case 2:
-                
-                    System.out.println("╔═══════════════════════════════════════════════════════╗");
-                    System.out.println("║  Te mostraré los numeros pares que hay hasta el 100 : ║");
-                    System.out.println("╚═══════════════════════════════════════════════════════╝");
-                    numerosPares = Number.generarNumerosPares();
-                    mostrarNumeros(numerosPares);
-                    System.out.println();
-                    break;
-                default:
-                   
-                    System.out.println("╔═══════════════════════════════════════════════════════════╗");
-                    System.out.println("║  Eso no es correcto mi amigo, las opciones son del 1 al 3 ║");
-                    System.out.println("╚═══════════════════════════════════════════════════════════╝");
-                    break;
-            }
-            
+        try (Scanner scanner = new Scanner(System.in)) {
+            int[] numerosPares = Number.generarNumerosPares();
             showMenu();
-            opcion = scanner.nextInt();
-            scanner.nextLine();
+            int opcion = scanner.nextInt();scanner.nextLine();   
+            
+            while (opcion !=3) {
+                switch (opcion) {
+                    case 1:
+                        
+                        System.out.println("╔═════════════════════╗");
+                        System.out.println("║ ¿Cuál es tú nombre? ║");
+                        System.out.println("╚═════════════════════╝");
+                        String name = scanner.nextLine();
+                        if (NameValidator.validateName(name)) {
+                            System.out.println("╔═══════════════════════════════════════════╗");
+                            System.out.println("║ Tu nombre es especial, ¡está en la lista! ║");
+                            System.out.println("╚═══════════════════════════════════════════╝");
+                        
+                        } else {  
+                            System.out.println("╔═════════════════════════════════════════╗");
+                            System.out.println("║ No está tú nombre, será para la otra :( ║");
+                            System.out.println("╚═════════════════════════════════════════╝");
+                        }
+                        break;
+                    case 2:
+                    
+                        System.out.println("╔═══════════════════════════════════════════════════════╗");
+                        System.out.println("║  Te mostraré los numeros pares que hay hasta el 100 : ║");
+                        System.out.println("╚═══════════════════════════════════════════════════════╝");
+                        numerosPares = Number.generarNumerosPares();
+                        mostrarNumeros(numerosPares);
+                        System.out.println();
+                        break;
+                    default:
+                       
+                        System.out.println("╔═══════════════════════════════════════════════════════════╗");
+                        System.out.println("║  Eso no es correcto mi amigo, las opciones son del 1 al 3 ║");
+                        System.out.println("╚═══════════════════════════════════════════════════════════╝");
+                        break;
+                }
+                
+                showMenu();
+                opcion = scanner.nextInt();
+                scanner.nextLine();
+            }
         }
-        
         System.out.println("╔════════════════════════════════════════════════════════════════╗");
         System.out.println("║  ¡Bye, bye! ¡Muchas gracias por utilizar el menú de Chris!     ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝");
